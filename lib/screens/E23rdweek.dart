@@ -99,11 +99,11 @@ class _E23rdweekState extends State<E23rdweek> {
                       Row(
                         children: [
                           Container(
-                            width: 130,
+                            width: 200,
                             height: 50,
                             alignment: Alignment.centerLeft,
                             child: Text(
-                              'After 3 Weeks',
+                              'Perform for 3 Weeks',
                               style: Standards.fontStyles["smallerMain"],
                             ),
                           ),

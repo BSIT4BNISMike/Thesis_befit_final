@@ -96,11 +96,11 @@ class _A6State extends State<A6> {
                       Row(
                         children: [
                           Container(
-                            width: 130,
+                            width: 200,
                             height: 50,
                             alignment: Alignment.centerLeft,
                             child: Text(
-                              'Initial Week',
+                              'Perform for 1 Week',
                               style: Standards.fontStyles["smallerMain"],
                             ),
                           ),
@@ -184,7 +184,11 @@ class _A6State extends State<A6> {
                                       Navigator.push(
                                         context,
                                         MaterialPageRoute(
-                                          builder: (context) => MountainClimbers(week: week, feedbackFiles: mountainClimbersFeedback),
+                                          builder: (context) =>
+                                              MountainClimbers(
+                                                  week: week,
+                                                  feedbackFiles:
+                                                      mountainClimbersFeedback),
                                         ),
                                       );
                                     },
@@ -202,11 +206,11 @@ class _A6State extends State<A6> {
                                 decoration: const BoxDecoration(
                                   color: Color.fromARGB(255, 252, 116, 190),
                                   borderRadius:
-                                  BorderRadius.all(Radius.circular(15)),
+                                      BorderRadius.all(Radius.circular(15)),
                                 ),
                                 child: FutureBuilder(
-                                  future:
-                                  downloadFeedbacks("Mountain_Climbers", week),
+                                  future: downloadFeedbacks(
+                                      "Mountain_Climbers", week),
                                   builder: (context, snapshot) {
                                     if (snapshot.connectionState ==
                                         ConnectionState.done) {
@@ -225,7 +229,8 @@ class _A6State extends State<A6> {
                                               ),
                                             ),
                                             width: (deviceWidth - 70) *
-                                                (mountainClimbersFeedback.length /
+                                                (mountainClimbersFeedback
+                                                        .length /
                                                     numOfExercises),
                                           ),
                                           Center(
@@ -240,9 +245,9 @@ class _A6State extends State<A6> {
                                         ConnectionState.waiting) {
                                       return const LinearProgressIndicator(
                                         color:
-                                        Color.fromARGB(255, 202, 36, 180),
+                                            Color.fromARGB(255, 202, 36, 180),
                                         backgroundColor:
-                                        Color.fromARGB(255, 252, 116, 190),
+                                            Color.fromARGB(255, 252, 116, 190),
                                       );
                                     } else {
                                       return const Center();
@@ -286,8 +291,8 @@ class _A6State extends State<A6> {
                                   width: 110,
                                   height: 130,
                                   child: Image(
-                                    image:
-                                        AssetImage("assets/images/jumpingjacks.jpg"),
+                                    image: AssetImage(
+                                        "assets/images/jumpingjacks.jpg"),
                                     height: 95,
                                     width: 95,
                                     fit: BoxFit.fill,
@@ -324,7 +329,10 @@ class _A6State extends State<A6> {
                                       Navigator.push(
                                         context,
                                         MaterialPageRoute(
-                                          builder: (context) => JumpingJacks(week: week, feedbackFiles: jumpingJacksFeedback),
+                                          builder: (context) => JumpingJacks(
+                                              week: week,
+                                              feedbackFiles:
+                                                  jumpingJacksFeedback),
                                         ),
                                       );
                                     },
@@ -342,10 +350,11 @@ class _A6State extends State<A6> {
                                 decoration: const BoxDecoration(
                                   color: Color.fromARGB(255, 204, 144, 236),
                                   borderRadius:
-                                  BorderRadius.all(Radius.circular(15)),
+                                      BorderRadius.all(Radius.circular(15)),
                                 ),
                                 child: FutureBuilder(
-                                  future: downloadFeedbacks("Jumping_Jacks", week),
+                                  future:
+                                      downloadFeedbacks("Jumping_Jacks", week),
                                   builder: (context, snapshot) {
                                     if (snapshot.connectionState ==
                                         ConnectionState.done) {
@@ -379,9 +388,9 @@ class _A6State extends State<A6> {
                                         ConnectionState.waiting) {
                                       return const LinearProgressIndicator(
                                         color:
-                                        Color.fromARGB(255, 153, 110, 180),
+                                            Color.fromARGB(255, 153, 110, 180),
                                         backgroundColor:
-                                        Color.fromARGB(255, 204, 144, 236),
+                                            Color.fromARGB(255, 204, 144, 236),
                                       );
                                     } else {
                                       return const Center();
@@ -424,8 +433,8 @@ class _A6State extends State<A6> {
                                   width: 110,
                                   height: 170,
                                   child: Image(
-                                    image:
-                                        AssetImage("assets/images/bicyclecrunch.jpg"),
+                                    image: AssetImage(
+                                        "assets/images/bicyclecrunch.jpg"),
                                     height: 95,
                                     width: 95,
                                     fit: BoxFit.fill,
@@ -462,7 +471,10 @@ class _A6State extends State<A6> {
                                       Navigator.push(
                                         context,
                                         MaterialPageRoute(
-                                          builder: (context) => BicycleCrunch(week: week, feedbackFiles: bicycleCrunchFeedback),
+                                          builder: (context) => BicycleCrunch(
+                                              week: week,
+                                              feedbackFiles:
+                                                  bicycleCrunchFeedback),
                                         ),
                                       );
                                     },
@@ -480,11 +492,11 @@ class _A6State extends State<A6> {
                                 decoration: const BoxDecoration(
                                   color: Color.fromARGB(255, 252, 116, 190),
                                   borderRadius:
-                                  BorderRadius.all(Radius.circular(15)),
+                                      BorderRadius.all(Radius.circular(15)),
                                 ),
                                 child: FutureBuilder(
                                   future:
-                                  downloadFeedbacks("Bicycle_Crunch", week),
+                                      downloadFeedbacks("Bicycle_Crunch", week),
                                   builder: (context, snapshot) {
                                     if (snapshot.connectionState ==
                                         ConnectionState.done) {
@@ -518,9 +530,9 @@ class _A6State extends State<A6> {
                                         ConnectionState.waiting) {
                                       return const LinearProgressIndicator(
                                         color:
-                                        Color.fromARGB(255, 202, 36, 180),
+                                            Color.fromARGB(255, 202, 36, 180),
                                         backgroundColor:
-                                        Color.fromARGB(255, 252, 116, 190),
+                                            Color.fromARGB(255, 252, 116, 190),
                                       );
                                     } else {
                                       return const Center();
@@ -601,7 +613,10 @@ class _A6State extends State<A6> {
                                       Navigator.push(
                                         context,
                                         MaterialPageRoute(
-                                          builder: (context) => PrisonerSquats(week: week, feedbackFiles: prisonerSquatsFeedback),
+                                          builder: (context) => PrisonerSquats(
+                                              week: week,
+                                              feedbackFiles:
+                                                  prisonerSquatsFeedback),
                                         ),
                                       );
                                     },
@@ -619,10 +634,11 @@ class _A6State extends State<A6> {
                                 decoration: const BoxDecoration(
                                   color: Color.fromARGB(255, 204, 144, 236),
                                   borderRadius:
-                                  BorderRadius.all(Radius.circular(15)),
+                                      BorderRadius.all(Radius.circular(15)),
                                 ),
                                 child: FutureBuilder(
-                                  future: downloadFeedbacks("Prisoner_Squats", week),
+                                  future: downloadFeedbacks(
+                                      "Prisoner_Squats", week),
                                   builder: (context, snapshot) {
                                     if (snapshot.connectionState ==
                                         ConnectionState.done) {
@@ -656,9 +672,9 @@ class _A6State extends State<A6> {
                                         ConnectionState.waiting) {
                                       return const LinearProgressIndicator(
                                         color:
-                                        Color.fromARGB(255, 153, 110, 180),
+                                            Color.fromARGB(255, 153, 110, 180),
                                         backgroundColor:
-                                        Color.fromARGB(255, 204, 144, 236),
+                                            Color.fromARGB(255, 204, 144, 236),
                                       );
                                     } else {
                                       return const Center();
@@ -701,7 +717,8 @@ class _A6State extends State<A6> {
                                   width: 110,
                                   height: 130,
                                   child: Image(
-                                    image: AssetImage("assets/images/sidelunges.jpg"),
+                                    image: AssetImage(
+                                        "assets/images/sidelunges.jpg"),
                                     height: 95,
                                     width: 95,
                                     fit: BoxFit.fill,
@@ -738,7 +755,10 @@ class _A6State extends State<A6> {
                                       Navigator.push(
                                         context,
                                         MaterialPageRoute(
-                                          builder: (context) => SideLunges(week: week, feedbackFiles: sideLungesFeedback),
+                                          builder: (context) => SideLunges(
+                                              week: week,
+                                              feedbackFiles:
+                                                  sideLungesFeedback),
                                         ),
                                       );
                                     },
@@ -756,11 +776,11 @@ class _A6State extends State<A6> {
                                 decoration: const BoxDecoration(
                                   color: Color.fromARGB(255, 252, 116, 190),
                                   borderRadius:
-                                  BorderRadius.all(Radius.circular(15)),
+                                      BorderRadius.all(Radius.circular(15)),
                                 ),
                                 child: FutureBuilder(
                                   future:
-                                  downloadFeedbacks("Side_Lunges", week),
+                                      downloadFeedbacks("Side_Lunges", week),
                                   builder: (context, snapshot) {
                                     if (snapshot.connectionState ==
                                         ConnectionState.done) {
@@ -794,9 +814,9 @@ class _A6State extends State<A6> {
                                         ConnectionState.waiting) {
                                       return const LinearProgressIndicator(
                                         color:
-                                        Color.fromARGB(255, 202, 36, 180),
+                                            Color.fromARGB(255, 202, 36, 180),
                                         backgroundColor:
-                                        Color.fromARGB(255, 252, 116, 190),
+                                            Color.fromARGB(255, 252, 116, 190),
                                       );
                                     } else {
                                       return const Center();
@@ -844,13 +864,13 @@ class _A6State extends State<A6> {
                             bicycleCrunchFeedback.length == numOfExercises &&
                             prisonerSquatsFeedback.length == numOfExercises &&
                             sideLungesFeedback.length == numOfExercises) {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => D32ndweek(),
-                              ),
-                            );
-                          }
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => D32ndweek(),
+                            ),
+                          );
+                        }
                       },
                     ),
                   ),

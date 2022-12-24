@@ -90,11 +90,11 @@ class _A1toA32ndState extends State<A1toA32nd> {
                       Row(
                         children: [
                           Container(
-                            width: 130,
+                            width: 200,
                             height: 50,
                             alignment: Alignment.centerLeft,
                             child: Text(
-                              'After 2 Weeks',
+                              'Perform for 2 Weeks',
                               style: Standards.fontStyles["smallerMain"],
                             ),
                           ),

@@ -96,11 +96,11 @@ class _A8State extends State<A8> {
                       Row(
                         children: [
                           Container(
-                            width: 130,
+                            width: 200,
                             height: 50,
                             alignment: Alignment.centerLeft,
                             child: Text(
-                              'Initial Week',
+                              'Perform for 1 Week',
                               style: Standards.fontStyles["smallerMain"],
                             ),
                           ),

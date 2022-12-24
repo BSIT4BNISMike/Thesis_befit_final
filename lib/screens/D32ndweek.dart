@@ -99,11 +99,11 @@ class _D32ndweekState extends State<D32ndweek> {
                       Row(
                         children: [
                           Container(
-                            width: 130,
+                            width: 200,
                             height: 50,
                             alignment: Alignment.centerLeft,
                             child: Text(
-                              'After 2 Weeks',
+                              'Perform for 2 Weeks',
                               style: Standards.fontStyles["smallerMain"],
                             ),
                           ),

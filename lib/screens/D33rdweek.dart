@@ -96,11 +96,11 @@ class _D33rdweekState extends State<D33rdweek> {
                       Row(
                         children: [
                           Container(
-                            width: 130,
+                            width: 200,
                             height: 50,
                             alignment: Alignment.centerLeft,
                             child: Text(
-                              'After 3 Weeks',
+                              'Perform for 3 Weeks',
                               style: Standards.fontStyles["smallerMain"],
                             ),
                           ),
@@ -184,8 +184,11 @@ class _D33rdweekState extends State<D33rdweek> {
                                       Navigator.push(
                                         context,
                                         MaterialPageRoute(
-                                          builder: (context) => MountainClimbers(week: week,
-                                          feedbackFiles: mountainClimbersFeedback),
+                                          builder: (context) =>
+                                              MountainClimbers(
+                                                  week: week,
+                                                  feedbackFiles:
+                                                      mountainClimbersFeedback),
                                         ),
                                       );
                                     },
@@ -203,11 +206,11 @@ class _D33rdweekState extends State<D33rdweek> {
                                 decoration: const BoxDecoration(
                                   color: Color.fromARGB(255, 252, 116, 190),
                                   borderRadius:
-                                  BorderRadius.all(Radius.circular(15)),
+                                      BorderRadius.all(Radius.circular(15)),
                                 ),
                                 child: FutureBuilder(
-                                  future:
-                                  downloadFeedbacks("Mountain_Climbers", week),
+                                  future: downloadFeedbacks(
+                                      "Mountain_Climbers", week),
                                   builder: (context, snapshot) {
                                     if (snapshot.connectionState ==
                                         ConnectionState.done) {
@@ -226,7 +229,8 @@ class _D33rdweekState extends State<D33rdweek> {
                                               ),
                                             ),
                                             width: (deviceWidth - 70) *
-                                                (mountainClimbersFeedback.length /
+                                                (mountainClimbersFeedback
+                                                        .length /
                                                     numOfExercises),
                                           ),
                                           Center(
@@ -241,9 +245,9 @@ class _D33rdweekState extends State<D33rdweek> {
                                         ConnectionState.waiting) {
                                       return const LinearProgressIndicator(
                                         color:
-                                        Color.fromARGB(255, 202, 36, 180),
+                                            Color.fromARGB(255, 202, 36, 180),
                                         backgroundColor:
-                                        Color.fromARGB(255, 252, 116, 190),
+                                            Color.fromARGB(255, 252, 116, 190),
                                       );
                                     } else {
                                       return const Center();
@@ -287,8 +291,8 @@ class _D33rdweekState extends State<D33rdweek> {
                                   width: 110,
                                   height: 130,
                                   child: Image(
-                                    image:
-                                        AssetImage("assets/images/jumpingjacks.jpg"),
+                                    image: AssetImage(
+                                        "assets/images/jumpingjacks.jpg"),
                                     height: 95,
                                     width: 95,
                                     fit: BoxFit.fill,
@@ -325,7 +329,10 @@ class _D33rdweekState extends State<D33rdweek> {
                                       Navigator.push(
                                         context,
                                         MaterialPageRoute(
-                                          builder: (context) => JumpingJacks(week: week, feedbackFiles: jumpingJacksFeedback),
+                                          builder: (context) => JumpingJacks(
+                                              week: week,
+                                              feedbackFiles:
+                                                  jumpingJacksFeedback),
                                         ),
                                       );
                                     },
@@ -343,10 +350,11 @@ class _D33rdweekState extends State<D33rdweek> {
                                 decoration: const BoxDecoration(
                                   color: Color.fromARGB(255, 204, 144, 236),
                                   borderRadius:
-                                  BorderRadius.all(Radius.circular(15)),
+                                      BorderRadius.all(Radius.circular(15)),
                                 ),
                                 child: FutureBuilder(
-                                  future: downloadFeedbacks("Jumping_Jacks", week),
+                                  future:
+                                      downloadFeedbacks("Jumping_Jacks", week),
                                   builder: (context, snapshot) {
                                     if (snapshot.connectionState ==
                                         ConnectionState.done) {
@@ -380,9 +388,9 @@ class _D33rdweekState extends State<D33rdweek> {
                                         ConnectionState.waiting) {
                                       return const LinearProgressIndicator(
                                         color:
-                                        Color.fromARGB(255, 153, 110, 180),
+                                            Color.fromARGB(255, 153, 110, 180),
                                         backgroundColor:
-                                        Color.fromARGB(255, 204, 144, 236),
+                                            Color.fromARGB(255, 204, 144, 236),
                                       );
                                     } else {
                                       return const Center();
@@ -425,8 +433,8 @@ class _D33rdweekState extends State<D33rdweek> {
                                   width: 110,
                                   height: 130,
                                   child: Image(
-                                    image:
-                                        AssetImage("assets/images/russiantwist.jpg"),
+                                    image: AssetImage(
+                                        "assets/images/russiantwist.jpg"),
                                     height: 95,
                                     width: 95,
                                     fit: BoxFit.fill,
@@ -463,7 +471,10 @@ class _D33rdweekState extends State<D33rdweek> {
                                       Navigator.push(
                                         context,
                                         MaterialPageRoute(
-                                          builder: (context) => RussianTwist(week: week, feedbackFiles: russianTwistFeedback),
+                                          builder: (context) => RussianTwist(
+                                              week: week,
+                                              feedbackFiles:
+                                                  russianTwistFeedback),
                                         ),
                                       );
                                     },
@@ -481,11 +492,11 @@ class _D33rdweekState extends State<D33rdweek> {
                                 decoration: const BoxDecoration(
                                   color: Color.fromARGB(255, 252, 116, 190),
                                   borderRadius:
-                                  BorderRadius.all(Radius.circular(15)),
+                                      BorderRadius.all(Radius.circular(15)),
                                 ),
                                 child: FutureBuilder(
                                   future:
-                                  downloadFeedbacks("Russian_Twist", week),
+                                      downloadFeedbacks("Russian_Twist", week),
                                   builder: (context, snapshot) {
                                     if (snapshot.connectionState ==
                                         ConnectionState.done) {
@@ -519,9 +530,9 @@ class _D33rdweekState extends State<D33rdweek> {
                                         ConnectionState.waiting) {
                                       return const LinearProgressIndicator(
                                         color:
-                                        Color.fromARGB(255, 202, 36, 180),
+                                            Color.fromARGB(255, 202, 36, 180),
                                         backgroundColor:
-                                        Color.fromARGB(255, 252, 116, 190),
+                                            Color.fromARGB(255, 252, 116, 190),
                                       );
                                     } else {
                                       return const Center();
@@ -564,7 +575,8 @@ class _D33rdweekState extends State<D33rdweek> {
                                   width: 110,
                                   height: 130,
                                   child: Image(
-                                    image: AssetImage("assets/images/extension.jpg"),
+                                    image: AssetImage(
+                                        "assets/images/extension.jpg"),
                                     height: 95,
                                     width: 95,
                                     fit: BoxFit.fill,
@@ -601,7 +613,10 @@ class _D33rdweekState extends State<D33rdweek> {
                                       Navigator.push(
                                         context,
                                         MaterialPageRoute(
-                                          builder: (context) => Extension(week: week, feedbackFiles: extensionsFeedback),
+                                          builder: (context) => Extension(
+                                              week: week,
+                                              feedbackFiles:
+                                                  extensionsFeedback),
                                         ),
                                       );
                                     },
@@ -619,7 +634,7 @@ class _D33rdweekState extends State<D33rdweek> {
                                 decoration: const BoxDecoration(
                                   color: Color.fromARGB(255, 204, 144, 236),
                                   borderRadius:
-                                  BorderRadius.all(Radius.circular(15)),
+                                      BorderRadius.all(Radius.circular(15)),
                                 ),
                                 child: FutureBuilder(
                                   future: downloadFeedbacks("Extensions", week),
@@ -656,9 +671,9 @@ class _D33rdweekState extends State<D33rdweek> {
                                         ConnectionState.waiting) {
                                       return const LinearProgressIndicator(
                                         color:
-                                        Color.fromARGB(255, 153, 110, 180),
+                                            Color.fromARGB(255, 153, 110, 180),
                                         backgroundColor:
-                                        Color.fromARGB(255, 204, 144, 236),
+                                            Color.fromARGB(255, 204, 144, 236),
                                       );
                                     } else {
                                       return const Center();
@@ -740,7 +755,10 @@ class _D33rdweekState extends State<D33rdweek> {
                                       Navigator.push(
                                         context,
                                         MaterialPageRoute(
-                                          builder: (context) => PrisonerSquats(week: week, feedbackFiles: prisonerSquatsFeedback),
+                                          builder: (context) => PrisonerSquats(
+                                              week: week,
+                                              feedbackFiles:
+                                                  prisonerSquatsFeedback),
                                         ),
                                       );
                                     },
@@ -758,11 +776,11 @@ class _D33rdweekState extends State<D33rdweek> {
                                 decoration: const BoxDecoration(
                                   color: Color.fromARGB(255, 252, 116, 190),
                                   borderRadius:
-                                  BorderRadius.all(Radius.circular(15)),
+                                      BorderRadius.all(Radius.circular(15)),
                                 ),
                                 child: FutureBuilder(
-                                  future:
-                                  downloadFeedbacks("Prisoner_Squats", week),
+                                  future: downloadFeedbacks(
+                                      "Prisoner_Squats", week),
                                   builder: (context, snapshot) {
                                     if (snapshot.connectionState ==
                                         ConnectionState.done) {
@@ -796,9 +814,9 @@ class _D33rdweekState extends State<D33rdweek> {
                                         ConnectionState.waiting) {
                                       return const LinearProgressIndicator(
                                         color:
-                                        Color.fromARGB(255, 202, 36, 180),
+                                            Color.fromARGB(255, 202, 36, 180),
                                         backgroundColor:
-                                        Color.fromARGB(255, 252, 116, 190),
+                                            Color.fromARGB(255, 252, 116, 190),
                                       );
                                     } else {
                                       return const Center();
@@ -841,7 +859,8 @@ class _D33rdweekState extends State<D33rdweek> {
                                   width: 110,
                                   height: 130,
                                   child: Image(
-                                    image: AssetImage("assets/images/pushups.jpg"),
+                                    image:
+                                        AssetImage("assets/images/pushups.jpg"),
                                     height: 95,
                                     width: 95,
                                     fit: BoxFit.fill,
@@ -878,7 +897,9 @@ class _D33rdweekState extends State<D33rdweek> {
                                       Navigator.push(
                                         context,
                                         MaterialPageRoute(
-                                          builder: (context) => PushUps(week: week, feedbackFiles: pushUpsFeedback),
+                                          builder: (context) => PushUps(
+                                              week: week,
+                                              feedbackFiles: pushUpsFeedback),
                                         ),
                                       );
                                     },
@@ -896,7 +917,7 @@ class _D33rdweekState extends State<D33rdweek> {
                                 decoration: const BoxDecoration(
                                   color: Color.fromARGB(255, 204, 144, 236),
                                   borderRadius:
-                                  BorderRadius.all(Radius.circular(15)),
+                                      BorderRadius.all(Radius.circular(15)),
                                 ),
                                 child: FutureBuilder(
                                   future: downloadFeedbacks("Push_Ups", week),
@@ -933,9 +954,9 @@ class _D33rdweekState extends State<D33rdweek> {
                                         ConnectionState.waiting) {
                                       return const LinearProgressIndicator(
                                         color:
-                                        Color.fromARGB(255, 153, 110, 180),
+                                            Color.fromARGB(255, 153, 110, 180),
                                         backgroundColor:
-                                        Color.fromARGB(255, 204, 144, 236),
+                                            Color.fromARGB(255, 204, 144, 236),
                                       );
                                     } else {
                                       return const Center();
@@ -988,13 +1009,13 @@ class _D33rdweekState extends State<D33rdweek> {
                             extensionsFeedback.length == numOfExercises &&
                             prisonerSquatsFeedback.length == numOfExercises &&
                             pushUpsFeedback.length == numOfExercises) {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => Congrats(),
-                              ),
-                            );
-                          }
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => Congrats(),
+                            ),
+                          );
+                        }
                       },
                     ),
                   ),

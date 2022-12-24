@@ -96,11 +96,11 @@ class _E33rdweekState extends State<E33rdweek> {
                       Row(
                         children: [
                           Container(
-                            width: 130,
+                            width: 200,
                             height: 50,
                             alignment: Alignment.centerLeft,
                             child: Text(
-                              'After 3 Weeks',
+                              'Perform for 3 Weeks',
                               style: Standards.fontStyles["smallerMain"],
                             ),
                           ),
@@ -917,7 +917,7 @@ class _E33rdweekState extends State<E33rdweek> {
                                 decoration: const BoxDecoration(
                                   color: Color.fromARGB(255, 204, 144, 236),
                                   borderRadius:
-                                  BorderRadius.all(Radius.circular(15)),
+                                      BorderRadius.all(Radius.circular(15)),
                                 ),
                                 child: FutureBuilder(
                                   future: downloadFeedbacks("Push_Ups", week),
@@ -954,9 +954,9 @@ class _E33rdweekState extends State<E33rdweek> {
                                         ConnectionState.waiting) {
                                       return const LinearProgressIndicator(
                                         color:
-                                        Color.fromARGB(255, 153, 110, 180),
+                                            Color.fromARGB(255, 153, 110, 180),
                                         backgroundColor:
-                                        Color.fromARGB(255, 204, 144, 236),
+                                            Color.fromARGB(255, 204, 144, 236),
                                       );
                                     } else {
                                       return const Center();

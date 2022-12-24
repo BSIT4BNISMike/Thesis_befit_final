@@ -54,7 +54,7 @@ class _D23rdweekState extends State<D23rdweek> {
           style: Standards.fontStyles["main"],
         ),
       ),
-      body:  RefreshIndicator(
+      body: RefreshIndicator(
         onRefresh: () async {
           setState(() {});
           return Future<void>.delayed(const Duration(seconds: 1));
@@ -101,11 +101,11 @@ class _D23rdweekState extends State<D23rdweek> {
                       Row(
                         children: [
                           Container(
-                            width: 130,
+                            width: 200,
                             height: 50,
                             alignment: Alignment.centerLeft,
                             child: Text(
-                              'After 3 Weeks',
+                              'Perform for 3 Weeks',
                               style: Standards.fontStyles["smallerMain"],
                             ),
                           ),
@@ -191,7 +191,8 @@ class _D23rdweekState extends State<D23rdweek> {
                                         MaterialPageRoute(
                                           builder: (context) => PrisonerSquats(
                                             week: week,
-                                            feedbackFiles: prisonerSquatsFeedback,
+                                            feedbackFiles:
+                                                prisonerSquatsFeedback,
                                           ),
                                         ),
                                       );
@@ -210,11 +211,11 @@ class _D23rdweekState extends State<D23rdweek> {
                                 decoration: const BoxDecoration(
                                   color: Color.fromARGB(255, 252, 116, 190),
                                   borderRadius:
-                                  BorderRadius.all(Radius.circular(15)),
+                                      BorderRadius.all(Radius.circular(15)),
                                 ),
                                 child: FutureBuilder(
-                                  future:
-                                  downloadFeedbacks("Prisoner_Squats", week),
+                                  future: downloadFeedbacks(
+                                      "Prisoner_Squats", week),
                                   builder: (context, snapshot) {
                                     if (snapshot.connectionState ==
                                         ConnectionState.done) {
@@ -248,9 +249,9 @@ class _D23rdweekState extends State<D23rdweek> {
                                         ConnectionState.waiting) {
                                       return const LinearProgressIndicator(
                                         color:
-                                        Color.fromARGB(255, 202, 36, 180),
+                                            Color.fromARGB(255, 202, 36, 180),
                                         backgroundColor:
-                                        Color.fromARGB(255, 252, 116, 190),
+                                            Color.fromARGB(255, 252, 116, 190),
                                       );
                                     } else {
                                       return const Center();
@@ -294,8 +295,8 @@ class _D23rdweekState extends State<D23rdweek> {
                                   width: 110,
                                   height: 130,
                                   child: Image(
-                                    image:
-                                        AssetImage("assets/images/russiantwist.jpg"),
+                                    image: AssetImage(
+                                        "assets/images/russiantwist.jpg"),
                                     height: 95,
                                     width: 95,
                                     fit: BoxFit.fill,
@@ -353,10 +354,11 @@ class _D23rdweekState extends State<D23rdweek> {
                                 decoration: const BoxDecoration(
                                   color: Color.fromARGB(255, 204, 144, 236),
                                   borderRadius:
-                                  BorderRadius.all(Radius.circular(15)),
+                                      BorderRadius.all(Radius.circular(15)),
                                 ),
                                 child: FutureBuilder(
-                                  future: downloadFeedbacks("Russian_Twist", week),
+                                  future:
+                                      downloadFeedbacks("Russian_Twist", week),
                                   builder: (context, snapshot) {
                                     if (snapshot.connectionState ==
                                         ConnectionState.done) {
@@ -390,9 +392,9 @@ class _D23rdweekState extends State<D23rdweek> {
                                         ConnectionState.waiting) {
                                       return const LinearProgressIndicator(
                                         color:
-                                        Color.fromARGB(255, 153, 110, 180),
+                                            Color.fromARGB(255, 153, 110, 180),
                                         backgroundColor:
-                                        Color.fromARGB(255, 204, 144, 236),
+                                            Color.fromARGB(255, 204, 144, 236),
                                       );
                                     } else {
                                       return const Center();
@@ -435,7 +437,8 @@ class _D23rdweekState extends State<D23rdweek> {
                                   width: 110,
                                   height: 130,
                                   child: Image(
-                                    image: AssetImage("assets/images/pushups.jpg"),
+                                    image:
+                                        AssetImage("assets/images/pushups.jpg"),
                                     height: 95,
                                     width: 95,
                                     fit: BoxFit.fill,
@@ -493,11 +496,10 @@ class _D23rdweekState extends State<D23rdweek> {
                                 decoration: const BoxDecoration(
                                   color: Color.fromARGB(255, 252, 116, 190),
                                   borderRadius:
-                                  BorderRadius.all(Radius.circular(15)),
+                                      BorderRadius.all(Radius.circular(15)),
                                 ),
                                 child: FutureBuilder(
-                                  future:
-                                  downloadFeedbacks("Push_Ups", week),
+                                  future: downloadFeedbacks("Push_Ups", week),
                                   builder: (context, snapshot) {
                                     if (snapshot.connectionState ==
                                         ConnectionState.done) {
@@ -531,9 +533,9 @@ class _D23rdweekState extends State<D23rdweek> {
                                         ConnectionState.waiting) {
                                       return const LinearProgressIndicator(
                                         color:
-                                        Color.fromARGB(255, 202, 36, 180),
+                                            Color.fromARGB(255, 202, 36, 180),
                                         backgroundColor:
-                                        Color.fromARGB(255, 252, 116, 190),
+                                            Color.fromARGB(255, 252, 116, 190),
                                       );
                                     } else {
                                       return const Center();
@@ -576,7 +578,8 @@ class _D23rdweekState extends State<D23rdweek> {
                                   width: 110,
                                   height: 130,
                                   child: Image(
-                                    image: AssetImage("assets/images/extension.jpg"),
+                                    image: AssetImage(
+                                        "assets/images/extension.jpg"),
                                     height: 95,
                                     width: 95,
                                     fit: BoxFit.fill,
@@ -634,7 +637,7 @@ class _D23rdweekState extends State<D23rdweek> {
                                 decoration: const BoxDecoration(
                                   color: Color.fromARGB(255, 204, 144, 236),
                                   borderRadius:
-                                  BorderRadius.all(Radius.circular(15)),
+                                      BorderRadius.all(Radius.circular(15)),
                                 ),
                                 child: FutureBuilder(
                                   future: downloadFeedbacks("Extensions", week),
@@ -671,9 +674,9 @@ class _D23rdweekState extends State<D23rdweek> {
                                         ConnectionState.waiting) {
                                       return const LinearProgressIndicator(
                                         color:
-                                        Color.fromARGB(255, 153, 110, 180),
+                                            Color.fromARGB(255, 153, 110, 180),
                                         backgroundColor:
-                                        Color.fromARGB(255, 204, 144, 236),
+                                            Color.fromARGB(255, 204, 144, 236),
                                       );
                                     } else {
                                       return const Center();
@@ -717,7 +720,8 @@ class _D23rdweekState extends State<D23rdweek> {
                                   width: 110,
                                   height: 130,
                                   child: Image(
-                                    image: AssetImage("assets/images/plank.jpg"),
+                                    image:
+                                        AssetImage("assets/images/plank.jpg"),
                                     height: 95,
                                     width: 95,
                                     fit: BoxFit.fill,
@@ -775,11 +779,10 @@ class _D23rdweekState extends State<D23rdweek> {
                                 decoration: const BoxDecoration(
                                   color: Color.fromARGB(255, 252, 116, 190),
                                   borderRadius:
-                                  BorderRadius.all(Radius.circular(15)),
+                                      BorderRadius.all(Radius.circular(15)),
                                 ),
                                 child: FutureBuilder(
-                                  future:
-                                  downloadFeedbacks("Planks", week),
+                                  future: downloadFeedbacks("Planks", week),
                                   builder: (context, snapshot) {
                                     if (snapshot.connectionState ==
                                         ConnectionState.done) {
@@ -813,9 +816,9 @@ class _D23rdweekState extends State<D23rdweek> {
                                         ConnectionState.waiting) {
                                       return const LinearProgressIndicator(
                                         color:
-                                        Color.fromARGB(255, 202, 36, 180),
+                                            Color.fromARGB(255, 202, 36, 180),
                                         backgroundColor:
-                                        Color.fromARGB(255, 252, 116, 190),
+                                            Color.fromARGB(255, 252, 116, 190),
                                       );
                                     } else {
                                       return const Center();
@@ -858,8 +861,8 @@ class _D23rdweekState extends State<D23rdweek> {
                                   width: 110,
                                   height: 130,
                                   child: Image(
-                                    image:
-                                        AssetImage("assets/images/kneetochest.jpg"),
+                                    image: AssetImage(
+                                        "assets/images/kneetochest.jpg"),
                                     height: 95,
                                     width: 95,
                                     fit: BoxFit.fill,
@@ -917,10 +920,11 @@ class _D23rdweekState extends State<D23rdweek> {
                                 decoration: const BoxDecoration(
                                   color: Color.fromARGB(255, 204, 144, 236),
                                   borderRadius:
-                                  BorderRadius.all(Radius.circular(15)),
+                                      BorderRadius.all(Radius.circular(15)),
                                 ),
                                 child: FutureBuilder(
-                                  future: downloadFeedbacks("Knee_To_Chest", week),
+                                  future:
+                                      downloadFeedbacks("Knee_To_Chest", week),
                                   builder: (context, snapshot) {
                                     if (snapshot.connectionState ==
                                         ConnectionState.done) {
@@ -954,9 +958,9 @@ class _D23rdweekState extends State<D23rdweek> {
                                         ConnectionState.waiting) {
                                       return const LinearProgressIndicator(
                                         color:
-                                        Color.fromARGB(255, 153, 110, 180),
+                                            Color.fromARGB(255, 153, 110, 180),
                                         backgroundColor:
-                                        Color.fromARGB(255, 204, 144, 236),
+                                            Color.fromARGB(255, 204, 144, 236),
                                       );
                                     } else {
                                       return const Center();
@@ -999,7 +1003,8 @@ class _D23rdweekState extends State<D23rdweek> {
                                   width: 110,
                                   height: 130,
                                   child: Image(
-                                    image: AssetImage("assets/images/cobrapose.jpg"),
+                                    image: AssetImage(
+                                        "assets/images/cobrapose.jpg"),
                                     height: 95,
                                     width: 95,
                                     fit: BoxFit.fill,
@@ -1057,11 +1062,10 @@ class _D23rdweekState extends State<D23rdweek> {
                                 decoration: const BoxDecoration(
                                   color: Color.fromARGB(255, 252, 116, 190),
                                   borderRadius:
-                                  BorderRadius.all(Radius.circular(15)),
+                                      BorderRadius.all(Radius.circular(15)),
                                 ),
                                 child: FutureBuilder(
-                                  future:
-                                  downloadFeedbacks("Cobra_Pose", week),
+                                  future: downloadFeedbacks("Cobra_Pose", week),
                                   builder: (context, snapshot) {
                                     if (snapshot.connectionState ==
                                         ConnectionState.done) {
@@ -1095,9 +1099,9 @@ class _D23rdweekState extends State<D23rdweek> {
                                         ConnectionState.waiting) {
                                       return const LinearProgressIndicator(
                                         color:
-                                        Color.fromARGB(255, 202, 36, 180),
+                                            Color.fromARGB(255, 202, 36, 180),
                                         backgroundColor:
-                                        Color.fromARGB(255, 252, 116, 190),
+                                            Color.fromARGB(255, 252, 116, 190),
                                       );
                                     } else {
                                       return const Center();
@@ -1140,8 +1144,8 @@ class _D23rdweekState extends State<D23rdweek> {
                                   width: 110,
                                   height: 130,
                                   child: Image(
-                                    image:
-                                        AssetImage("assets/images/jumpingjacks.jpg"),
+                                    image: AssetImage(
+                                        "assets/images/jumpingjacks.jpg"),
                                     height: 95,
                                     width: 95,
                                     fit: BoxFit.fill,
@@ -1199,10 +1203,11 @@ class _D23rdweekState extends State<D23rdweek> {
                                 decoration: const BoxDecoration(
                                   color: Color.fromARGB(255, 204, 144, 236),
                                   borderRadius:
-                                  BorderRadius.all(Radius.circular(15)),
+                                      BorderRadius.all(Radius.circular(15)),
                                 ),
                                 child: FutureBuilder(
-                                  future: downloadFeedbacks("Jumping_Jacks", week),
+                                  future:
+                                      downloadFeedbacks("Jumping_Jacks", week),
                                   builder: (context, snapshot) {
                                     if (snapshot.connectionState ==
                                         ConnectionState.done) {
@@ -1236,9 +1241,9 @@ class _D23rdweekState extends State<D23rdweek> {
                                         ConnectionState.waiting) {
                                       return const LinearProgressIndicator(
                                         color:
-                                        Color.fromARGB(255, 153, 110, 180),
+                                            Color.fromARGB(255, 153, 110, 180),
                                         backgroundColor:
-                                        Color.fromARGB(255, 204, 144, 236),
+                                            Color.fromARGB(255, 204, 144, 236),
                                       );
                                     } else {
                                       return const Center();

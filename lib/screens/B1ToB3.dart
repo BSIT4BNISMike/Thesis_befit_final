@@ -94,11 +94,11 @@ class _A2State extends State<A2> {
                       Row(
                         children: [
                           Container(
-                            width: 130,
+                            width: 200,
                             height: 50,
                             alignment: Alignment.centerLeft,
                             child: Text(
-                              'Initial Week',
+                              'Perform for 1 Week',
                               style: Standards.fontStyles["smallerMain"],
                             ),
                           ),
@@ -430,8 +430,8 @@ class _A2State extends State<A2> {
                                   width: 110,
                                   height: 130,
                                   child: Image(
-                                    image:
-                                        AssetImage("assets/images/kneetochest.jpg"),
+                                    image: AssetImage(
+                                        "assets/images/kneetochest.jpg"),
                                     height: 95,
                                     width: 95,
                                     fit: BoxFit.fill,
@@ -489,11 +489,11 @@ class _A2State extends State<A2> {
                                 decoration: const BoxDecoration(
                                   color: Color.fromARGB(255, 252, 116, 190),
                                   borderRadius:
-                                  BorderRadius.all(Radius.circular(15)),
+                                      BorderRadius.all(Radius.circular(15)),
                                 ),
                                 child: FutureBuilder(
                                   future:
-                                  downloadFeedbacks("Knee_To_Chest", week),
+                                      downloadFeedbacks("Knee_To_Chest", week),
                                   builder: (context, snapshot) {
                                     if (snapshot.connectionState ==
                                         ConnectionState.done) {
@@ -527,9 +527,9 @@ class _A2State extends State<A2> {
                                         ConnectionState.waiting) {
                                       return const LinearProgressIndicator(
                                         color:
-                                        Color.fromARGB(255, 202, 36, 180),
+                                            Color.fromARGB(255, 202, 36, 180),
                                         backgroundColor:
-                                        Color.fromARGB(255, 252, 116, 190),
+                                            Color.fromARGB(255, 252, 116, 190),
                                       );
                                     } else {
                                       return const Center();
@@ -572,8 +572,8 @@ class _A2State extends State<A2> {
                                   width: 110,
                                   height: 130,
                                   child: Image(
-                                    image:
-                                        AssetImage("assets/images/sidelunges.jpg"),
+                                    image: AssetImage(
+                                        "assets/images/sidelunges.jpg"),
                                     height: 95,
                                     width: 95,
                                     fit: BoxFit.fill,
@@ -631,10 +631,11 @@ class _A2State extends State<A2> {
                                 decoration: const BoxDecoration(
                                   color: Color.fromARGB(255, 204, 144, 236),
                                   borderRadius:
-                                  BorderRadius.all(Radius.circular(15)),
+                                      BorderRadius.all(Radius.circular(15)),
                                 ),
                                 child: FutureBuilder(
-                                  future: downloadFeedbacks("Side_Lunges", week),
+                                  future:
+                                      downloadFeedbacks("Side_Lunges", week),
                                   builder: (context, snapshot) {
                                     if (snapshot.connectionState ==
                                         ConnectionState.done) {
@@ -668,9 +669,9 @@ class _A2State extends State<A2> {
                                         ConnectionState.waiting) {
                                       return const LinearProgressIndicator(
                                         color:
-                                        Color.fromARGB(255, 153, 110, 180),
+                                            Color.fromARGB(255, 153, 110, 180),
                                         backgroundColor:
-                                        Color.fromARGB(255, 204, 144, 236),
+                                            Color.fromARGB(255, 204, 144, 236),
                                       );
                                     } else {
                                       return const Center();

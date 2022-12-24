@@ -95,11 +95,11 @@ class _A1State extends State<A1> {
                       Row(
                         children: [
                           Container(
-                            width: 130,
+                            width: 200,
                             height: 50,
                             alignment: Alignment.centerLeft,
                             child: Text(
-                              'Initial Week',
+                              'Perform for 1 Week',
                               style: Standards.fontStyles["smallerMain"],
                             ),
                           ),
@@ -290,7 +290,8 @@ class _A1State extends State<A1> {
                                   future:
                                       downloadFeedbacks("Knee_To_Chest", week),
                                   builder: (context, snapshot) {
-                                    if (snapshot.connectionState == ConnectionState.done) {
+                                    if (snapshot.connectionState ==
+                                        ConnectionState.done) {
                                       kneeToChestFeedback = snapshot.data!;
                                       return Stack(
                                         children: [
@@ -321,11 +322,9 @@ class _A1State extends State<A1> {
                                         ConnectionState.waiting) {
                                       return const LinearProgressIndicator(
                                         color:
-                                        Color.fromARGB(
-                                            255, 153, 110, 180),
+                                            Color.fromARGB(255, 153, 110, 180),
                                         backgroundColor:
-                                        Color.fromARGB(
-                                            255, 204, 144, 236),
+                                            Color.fromARGB(255, 204, 144, 236),
                                       );
                                     } else {
                                       return const Center();

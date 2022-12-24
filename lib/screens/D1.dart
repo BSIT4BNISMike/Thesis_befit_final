@@ -96,11 +96,11 @@ class _A4State extends State<A4> {
                       Row(
                         children: [
                           Container(
-                            width: 130,
+                            width: 200,
                             height: 50,
                             alignment: Alignment.centerLeft,
                             child: Text(
-                              'Initial Week',
+                              'Perform for 1 Week',
                               style: Standards.fontStyles["smallerMain"],
                             ),
                           ),
@@ -184,7 +184,10 @@ class _A4State extends State<A4> {
                                       Navigator.push(
                                         context,
                                         MaterialPageRoute(
-                                          builder: (context) => PrisonerSquats(week: week, feedbackFiles: prisonerSquatsFeedback),
+                                          builder: (context) => PrisonerSquats(
+                                              week: week,
+                                              feedbackFiles:
+                                                  prisonerSquatsFeedback),
                                         ),
                                       );
                                     },
@@ -202,11 +205,11 @@ class _A4State extends State<A4> {
                                 decoration: const BoxDecoration(
                                   color: Color.fromARGB(255, 252, 116, 190),
                                   borderRadius:
-                                  BorderRadius.all(Radius.circular(15)),
+                                      BorderRadius.all(Radius.circular(15)),
                                 ),
                                 child: FutureBuilder(
-                                  future:
-                                  downloadFeedbacks("Prisoner_Squats", week),
+                                  future: downloadFeedbacks(
+                                      "Prisoner_Squats", week),
                                   builder: (context, snapshot) {
                                     if (snapshot.connectionState ==
                                         ConnectionState.done) {
@@ -240,9 +243,9 @@ class _A4State extends State<A4> {
                                         ConnectionState.waiting) {
                                       return const LinearProgressIndicator(
                                         color:
-                                        Color.fromARGB(255, 202, 36, 180),
+                                            Color.fromARGB(255, 202, 36, 180),
                                         backgroundColor:
-                                        Color.fromARGB(255, 252, 116, 190),
+                                            Color.fromARGB(255, 252, 116, 190),
                                       );
                                     } else {
                                       return const Center();
@@ -286,8 +289,8 @@ class _A4State extends State<A4> {
                                   width: 110,
                                   height: 170,
                                   child: Image(
-                                    image:
-                                        AssetImage("assets/images/bicyclecrunch.jpg"),
+                                    image: AssetImage(
+                                        "assets/images/bicyclecrunch.jpg"),
                                     height: 95,
                                     width: 95,
                                     fit: BoxFit.fill,
@@ -324,7 +327,10 @@ class _A4State extends State<A4> {
                                       Navigator.push(
                                         context,
                                         MaterialPageRoute(
-                                          builder: (context) => BicycleCrunch(week: week, feedbackFiles: bicycleCrunchFeedback),
+                                          builder: (context) => BicycleCrunch(
+                                              week: week,
+                                              feedbackFiles:
+                                                  bicycleCrunchFeedback),
                                         ),
                                       );
                                     },
@@ -342,10 +348,11 @@ class _A4State extends State<A4> {
                                 decoration: const BoxDecoration(
                                   color: Color.fromARGB(255, 204, 144, 236),
                                   borderRadius:
-                                  BorderRadius.all(Radius.circular(15)),
+                                      BorderRadius.all(Radius.circular(15)),
                                 ),
                                 child: FutureBuilder(
-                                  future: downloadFeedbacks("Bicycle_Crunch", week),
+                                  future:
+                                      downloadFeedbacks("Bicycle_Crunch", week),
                                   builder: (context, snapshot) {
                                     if (snapshot.connectionState ==
                                         ConnectionState.done) {
@@ -379,9 +386,9 @@ class _A4State extends State<A4> {
                                         ConnectionState.waiting) {
                                       return const LinearProgressIndicator(
                                         color:
-                                        Color.fromARGB(255, 153, 110, 180),
+                                            Color.fromARGB(255, 153, 110, 180),
                                         backgroundColor:
-                                        Color.fromARGB(255, 204, 144, 236),
+                                            Color.fromARGB(255, 204, 144, 236),
                                       );
                                     } else {
                                       return const Center();
@@ -424,7 +431,8 @@ class _A4State extends State<A4> {
                                   width: 110,
                                   height: 130,
                                   child: Image(
-                                    image: AssetImage("assets/images/superman.jpg"),
+                                    image: AssetImage(
+                                        "assets/images/superman.jpg"),
                                     height: 95,
                                     width: 95,
                                     fit: BoxFit.fill,
@@ -461,7 +469,9 @@ class _A4State extends State<A4> {
                                       Navigator.push(
                                         context,
                                         MaterialPageRoute(
-                                          builder: (context) => Superman(week: week, feedbackFiles: supermanFeedback),
+                                          builder: (context) => Superman(
+                                              week: week,
+                                              feedbackFiles: supermanFeedback),
                                         ),
                                       );
                                     },
@@ -479,11 +489,10 @@ class _A4State extends State<A4> {
                                 decoration: const BoxDecoration(
                                   color: Color.fromARGB(255, 252, 116, 190),
                                   borderRadius:
-                                  BorderRadius.all(Radius.circular(15)),
+                                      BorderRadius.all(Radius.circular(15)),
                                 ),
                                 child: FutureBuilder(
-                                  future:
-                                  downloadFeedbacks("Superman", week),
+                                  future: downloadFeedbacks("Superman", week),
                                   builder: (context, snapshot) {
                                     if (snapshot.connectionState ==
                                         ConnectionState.done) {
@@ -517,9 +526,9 @@ class _A4State extends State<A4> {
                                         ConnectionState.waiting) {
                                       return const LinearProgressIndicator(
                                         color:
-                                        Color.fromARGB(255, 202, 36, 180),
+                                            Color.fromARGB(255, 202, 36, 180),
                                         backgroundColor:
-                                        Color.fromARGB(255, 252, 116, 190),
+                                            Color.fromARGB(255, 252, 116, 190),
                                       );
                                     } else {
                                       return const Center();
@@ -562,7 +571,8 @@ class _A4State extends State<A4> {
                                   width: 110,
                                   height: 130,
                                   child: Image(
-                                    image: AssetImage("assets/images/tricepdips.jpg"),
+                                    image: AssetImage(
+                                        "assets/images/tricepdips.jpg"),
                                     height: 95,
                                     width: 95,
                                     fit: BoxFit.fill,
@@ -599,7 +609,10 @@ class _A4State extends State<A4> {
                                       Navigator.push(
                                         context,
                                         MaterialPageRoute(
-                                          builder: (context) => TricepDips(week: week, feedbackFiles: tricepsDipsFeedback),
+                                          builder: (context) => TricepDips(
+                                              week: week,
+                                              feedbackFiles:
+                                                  tricepsDipsFeedback),
                                         ),
                                       );
                                     },
@@ -617,10 +630,11 @@ class _A4State extends State<A4> {
                                 decoration: const BoxDecoration(
                                   color: Color.fromARGB(255, 204, 144, 236),
                                   borderRadius:
-                                  BorderRadius.all(Radius.circular(15)),
+                                      BorderRadius.all(Radius.circular(15)),
                                 ),
                                 child: FutureBuilder(
-                                  future: downloadFeedbacks("Triceps_Dips", week),
+                                  future:
+                                      downloadFeedbacks("Triceps_Dips", week),
                                   builder: (context, snapshot) {
                                     if (snapshot.connectionState ==
                                         ConnectionState.done) {
@@ -654,9 +668,9 @@ class _A4State extends State<A4> {
                                         ConnectionState.waiting) {
                                       return const LinearProgressIndicator(
                                         color:
-                                        Color.fromARGB(255, 153, 110, 180),
+                                            Color.fromARGB(255, 153, 110, 180),
                                         backgroundColor:
-                                        Color.fromARGB(255, 204, 144, 236),
+                                            Color.fromARGB(255, 204, 144, 236),
                                       );
                                     } else {
                                       return const Center();
@@ -699,8 +713,8 @@ class _A4State extends State<A4> {
                                   width: 110,
                                   height: 130,
                                   child: Image(
-                                    image:
-                                        AssetImage("assets/images/kneetochest.jpg"),
+                                    image: AssetImage(
+                                        "assets/images/kneetochest.jpg"),
                                     height: 95,
                                     width: 95,
                                     fit: BoxFit.fill,
@@ -737,7 +751,10 @@ class _A4State extends State<A4> {
                                       Navigator.push(
                                         context,
                                         MaterialPageRoute(
-                                          builder: (context) => KneeToChest(week: week, feedbackFiles: kneeToChestFeedback),
+                                          builder: (context) => KneeToChest(
+                                              week: week,
+                                              feedbackFiles:
+                                                  kneeToChestFeedback),
                                         ),
                                       );
                                     },
@@ -755,11 +772,11 @@ class _A4State extends State<A4> {
                                 decoration: const BoxDecoration(
                                   color: Color.fromARGB(255, 252, 116, 190),
                                   borderRadius:
-                                  BorderRadius.all(Radius.circular(15)),
+                                      BorderRadius.all(Radius.circular(15)),
                                 ),
                                 child: FutureBuilder(
                                   future:
-                                  downloadFeedbacks("Knee_To_Chest", week),
+                                      downloadFeedbacks("Knee_To_Chest", week),
                                   builder: (context, snapshot) {
                                     if (snapshot.connectionState ==
                                         ConnectionState.done) {
@@ -793,9 +810,9 @@ class _A4State extends State<A4> {
                                         ConnectionState.waiting) {
                                       return const LinearProgressIndicator(
                                         color:
-                                        Color.fromARGB(255, 202, 36, 180),
+                                            Color.fromARGB(255, 202, 36, 180),
                                         backgroundColor:
-                                        Color.fromARGB(255, 252, 116, 190),
+                                            Color.fromARGB(255, 252, 116, 190),
                                       );
                                     } else {
                                       return const Center();

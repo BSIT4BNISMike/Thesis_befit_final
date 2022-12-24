@@ -96,11 +96,11 @@ class _B1toB32ndState extends State<B1toB32nd> {
                       Row(
                         children: [
                           Container(
-                            width: 130,
+                            width: 200,
                             height: 50,
                             alignment: Alignment.centerLeft,
                             child: Text(
-                              'After 2 Weeks',
+                              'Perform for 2 Weeks',
                               style: Standards.fontStyles["smallerMain"],
                             ),
                           ),
@@ -184,7 +184,10 @@ class _B1toB32ndState extends State<B1toB32nd> {
                                       Navigator.push(
                                         context,
                                         MaterialPageRoute(
-                                          builder: (context) => PrisonerSquats(week: week, feedbackFiles: prisonerSquatsFeedback),
+                                          builder: (context) => PrisonerSquats(
+                                              week: week,
+                                              feedbackFiles:
+                                                  prisonerSquatsFeedback),
                                         ),
                                       );
                                     },
@@ -202,11 +205,11 @@ class _B1toB32ndState extends State<B1toB32nd> {
                                 decoration: const BoxDecoration(
                                   color: Color.fromARGB(255, 252, 116, 190),
                                   borderRadius:
-                                  BorderRadius.all(Radius.circular(15)),
+                                      BorderRadius.all(Radius.circular(15)),
                                 ),
                                 child: FutureBuilder(
-                                  future:
-                                  downloadFeedbacks("Prisoner_Squats", week),
+                                  future: downloadFeedbacks(
+                                      "Prisoner_Squats", week),
                                   builder: (context, snapshot) {
                                     if (snapshot.connectionState ==
                                         ConnectionState.done) {
@@ -240,9 +243,9 @@ class _B1toB32ndState extends State<B1toB32nd> {
                                         ConnectionState.waiting) {
                                       return const LinearProgressIndicator(
                                         color:
-                                        Color.fromARGB(255, 202, 36, 180),
+                                            Color.fromARGB(255, 202, 36, 180),
                                         backgroundColor:
-                                        Color.fromARGB(255, 252, 116, 190),
+                                            Color.fromARGB(255, 252, 116, 190),
                                       );
                                     } else {
                                       return const Center();
@@ -286,7 +289,8 @@ class _B1toB32ndState extends State<B1toB32nd> {
                                   width: 110,
                                   height: 130,
                                   child: Image(
-                                    image: AssetImage("assets/images/superman.jpg"),
+                                    image: AssetImage(
+                                        "assets/images/superman.jpg"),
                                     height: 95,
                                     width: 95,
                                     fit: BoxFit.fill,
@@ -323,7 +327,9 @@ class _B1toB32ndState extends State<B1toB32nd> {
                                       Navigator.push(
                                         context,
                                         MaterialPageRoute(
-                                          builder: (context) => Superman(week: week, feedbackFiles: supermanFeedback),
+                                          builder: (context) => Superman(
+                                              week: week,
+                                              feedbackFiles: supermanFeedback),
                                         ),
                                       );
                                     },
@@ -341,7 +347,7 @@ class _B1toB32ndState extends State<B1toB32nd> {
                                 decoration: const BoxDecoration(
                                   color: Color.fromARGB(255, 204, 144, 236),
                                   borderRadius:
-                                  BorderRadius.all(Radius.circular(15)),
+                                      BorderRadius.all(Radius.circular(15)),
                                 ),
                                 child: FutureBuilder(
                                   future: downloadFeedbacks("Superman", week),
@@ -378,9 +384,9 @@ class _B1toB32ndState extends State<B1toB32nd> {
                                         ConnectionState.waiting) {
                                       return const LinearProgressIndicator(
                                         color:
-                                        Color.fromARGB(255, 153, 110, 180),
+                                            Color.fromARGB(255, 153, 110, 180),
                                         backgroundColor:
-                                        Color.fromARGB(255, 204, 144, 236),
+                                            Color.fromARGB(255, 204, 144, 236),
                                       );
                                     } else {
                                       return const Center();
@@ -423,7 +429,8 @@ class _B1toB32ndState extends State<B1toB32nd> {
                                   width: 110,
                                   height: 130,
                                   child: Image(
-                                    image: AssetImage("assets/images/tricepdips.jpg"),
+                                    image: AssetImage(
+                                        "assets/images/tricepdips.jpg"),
                                     height: 95,
                                     width: 95,
                                     fit: BoxFit.fill,
@@ -460,7 +467,10 @@ class _B1toB32ndState extends State<B1toB32nd> {
                                       Navigator.push(
                                         context,
                                         MaterialPageRoute(
-                                          builder: (context) => TricepDips(week: week, feedbackFiles: tricepsDipsFeedback),
+                                          builder: (context) => TricepDips(
+                                              week: week,
+                                              feedbackFiles:
+                                                  tricepsDipsFeedback),
                                         ),
                                       );
                                     },
@@ -478,11 +488,11 @@ class _B1toB32ndState extends State<B1toB32nd> {
                                 decoration: const BoxDecoration(
                                   color: Color.fromARGB(255, 252, 116, 190),
                                   borderRadius:
-                                  BorderRadius.all(Radius.circular(15)),
+                                      BorderRadius.all(Radius.circular(15)),
                                 ),
                                 child: FutureBuilder(
                                   future:
-                                  downloadFeedbacks("Triceps_Dips", week),
+                                      downloadFeedbacks("Triceps_Dips", week),
                                   builder: (context, snapshot) {
                                     if (snapshot.connectionState ==
                                         ConnectionState.done) {
@@ -516,9 +526,9 @@ class _B1toB32ndState extends State<B1toB32nd> {
                                         ConnectionState.waiting) {
                                       return const LinearProgressIndicator(
                                         color:
-                                        Color.fromARGB(255, 202, 36, 180),
+                                            Color.fromARGB(255, 202, 36, 180),
                                         backgroundColor:
-                                        Color.fromARGB(255, 252, 116, 190),
+                                            Color.fromARGB(255, 252, 116, 190),
                                       );
                                     } else {
                                       return const Center();
@@ -561,8 +571,8 @@ class _B1toB32ndState extends State<B1toB32nd> {
                                   width: 110,
                                   height: 130,
                                   child: Image(
-                                    image:
-                                        AssetImage("assets/images/kneetochest.jpg"),
+                                    image: AssetImage(
+                                        "assets/images/kneetochest.jpg"),
                                     height: 95,
                                     width: 95,
                                     fit: BoxFit.fill,
@@ -599,7 +609,10 @@ class _B1toB32ndState extends State<B1toB32nd> {
                                       Navigator.push(
                                         context,
                                         MaterialPageRoute(
-                                          builder: (context) => KneeToChest(week: week, feedbackFiles: kneeToChestFeedback),
+                                          builder: (context) => KneeToChest(
+                                              week: week,
+                                              feedbackFiles:
+                                                  kneeToChestFeedback),
                                         ),
                                       );
                                     },
@@ -617,10 +630,11 @@ class _B1toB32ndState extends State<B1toB32nd> {
                                 decoration: const BoxDecoration(
                                   color: Color.fromARGB(255, 204, 144, 236),
                                   borderRadius:
-                                  BorderRadius.all(Radius.circular(15)),
+                                      BorderRadius.all(Radius.circular(15)),
                                 ),
                                 child: FutureBuilder(
-                                  future: downloadFeedbacks("Knee_To_Chest", week),
+                                  future:
+                                      downloadFeedbacks("Knee_To_Chest", week),
                                   builder: (context, snapshot) {
                                     if (snapshot.connectionState ==
                                         ConnectionState.done) {
@@ -654,9 +668,9 @@ class _B1toB32ndState extends State<B1toB32nd> {
                                         ConnectionState.waiting) {
                                       return const LinearProgressIndicator(
                                         color:
-                                        Color.fromARGB(255, 153, 110, 180),
+                                            Color.fromARGB(255, 153, 110, 180),
                                         backgroundColor:
-                                        Color.fromARGB(255, 204, 144, 236),
+                                            Color.fromARGB(255, 204, 144, 236),
                                       );
                                     } else {
                                       return const Center();
@@ -700,7 +714,8 @@ class _B1toB32ndState extends State<B1toB32nd> {
                                   width: 110,
                                   height: 130,
                                   child: Image(
-                                    image: AssetImage("assets/images/cobrapose.jpg"),
+                                    image: AssetImage(
+                                        "assets/images/cobrapose.jpg"),
                                     height: 95,
                                     width: 95,
                                     fit: BoxFit.fill,
@@ -737,7 +752,9 @@ class _B1toB32ndState extends State<B1toB32nd> {
                                       Navigator.push(
                                         context,
                                         MaterialPageRoute(
-                                          builder: (context) => CobraPose(week: week, feedbackFiles: cobraPoseFeedback),
+                                          builder: (context) => CobraPose(
+                                              week: week,
+                                              feedbackFiles: cobraPoseFeedback),
                                         ),
                                       );
                                     },
@@ -755,11 +772,10 @@ class _B1toB32ndState extends State<B1toB32nd> {
                                 decoration: const BoxDecoration(
                                   color: Color.fromARGB(255, 252, 116, 190),
                                   borderRadius:
-                                  BorderRadius.all(Radius.circular(15)),
+                                      BorderRadius.all(Radius.circular(15)),
                                 ),
                                 child: FutureBuilder(
-                                  future:
-                                  downloadFeedbacks("Cobra_Pose", week),
+                                  future: downloadFeedbacks("Cobra_Pose", week),
                                   builder: (context, snapshot) {
                                     if (snapshot.connectionState ==
                                         ConnectionState.done) {
@@ -793,9 +809,9 @@ class _B1toB32ndState extends State<B1toB32nd> {
                                         ConnectionState.waiting) {
                                       return const LinearProgressIndicator(
                                         color:
-                                        Color.fromARGB(255, 202, 36, 180),
+                                            Color.fromARGB(255, 202, 36, 180),
                                         backgroundColor:
-                                        Color.fromARGB(255, 252, 116, 190),
+                                            Color.fromARGB(255, 252, 116, 190),
                                       );
                                     } else {
                                       return const Center();
@@ -838,7 +854,8 @@ class _B1toB32ndState extends State<B1toB32nd> {
                                   width: 110,
                                   height: 130,
                                   child: Image(
-                                    image: AssetImage("assets/images/sidelunges.jpg"),
+                                    image: AssetImage(
+                                        "assets/images/sidelunges.jpg"),
                                     height: 95,
                                     width: 95,
                                     fit: BoxFit.fill,
@@ -875,7 +892,10 @@ class _B1toB32ndState extends State<B1toB32nd> {
                                       Navigator.push(
                                         context,
                                         MaterialPageRoute(
-                                          builder: (context) => SideLunges(week: week, feedbackFiles: sideLungesFeedback),
+                                          builder: (context) => SideLunges(
+                                              week: week,
+                                              feedbackFiles:
+                                                  sideLungesFeedback),
                                         ),
                                       );
                                     },
@@ -893,10 +913,11 @@ class _B1toB32ndState extends State<B1toB32nd> {
                                 decoration: const BoxDecoration(
                                   color: Color.fromARGB(255, 204, 144, 236),
                                   borderRadius:
-                                  BorderRadius.all(Radius.circular(15)),
+                                      BorderRadius.all(Radius.circular(15)),
                                 ),
                                 child: FutureBuilder(
-                                  future: downloadFeedbacks("Side_Lunges", week),
+                                  future:
+                                      downloadFeedbacks("Side_Lunges", week),
                                   builder: (context, snapshot) {
                                     if (snapshot.connectionState ==
                                         ConnectionState.done) {
@@ -930,9 +951,9 @@ class _B1toB32ndState extends State<B1toB32nd> {
                                         ConnectionState.waiting) {
                                       return const LinearProgressIndicator(
                                         color:
-                                        Color.fromARGB(255, 153, 110, 180),
+                                            Color.fromARGB(255, 153, 110, 180),
                                         backgroundColor:
-                                        Color.fromARGB(255, 204, 144, 236),
+                                            Color.fromARGB(255, 204, 144, 236),
                                       );
                                     } else {
                                       return const Center();
@@ -982,8 +1003,8 @@ class _B1toB32ndState extends State<B1toB32nd> {
                         if (prisonerSquatsFeedback.length == numOfExercises &&
                             supermanFeedback.length == numOfExercises &&
                             tricepsDipsFeedback.length == numOfExercises &&
-                            kneeToChestFeedback.length == numOfExercises  &&
-                            cobraPoseFeedback.length == numOfExercises  &&
+                            kneeToChestFeedback.length == numOfExercises &&
+                            cobraPoseFeedback.length == numOfExercises &&
                             sideLungesFeedback.length == numOfExercises) {
                           Navigator.push(
                             context,
