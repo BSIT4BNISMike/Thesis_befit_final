@@ -11,7 +11,7 @@ uploadFile(var exercise, var week) async {
 
   PlatformFile? pickedFile = result.files.first;
 
-  final path = '$email/${week}_week/$exercise/Video/New?/${pickedFile.name}';
+  final path = '$email/${week}_week/$exercise/${pickedFile.name}';
   final file = File(pickedFile.path!);
 
   final ref = FirebaseStorage.instance.ref().child(path);
