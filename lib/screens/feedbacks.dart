@@ -16,7 +16,6 @@ class Feedbacks extends StatefulWidget {
 }
 
 class _FeedbacksState extends State<Feedbacks> {
-
   @override
   Widget build(BuildContext context) {
     var deviceHeight = MediaQuery.of(context).size.height;
@@ -95,8 +94,10 @@ class _FeedbacksState extends State<Feedbacks> {
                                       builder: (BuildContext context) {
                                         return Dialog(
                                           shape: RoundedRectangleBorder(
-                                              borderRadius: BorderRadius.circular(25)),
-                                          insetPadding: const EdgeInsets.all(15),
+                                              borderRadius:
+                                                  BorderRadius.circular(25)),
+                                          insetPadding:
+                                              const EdgeInsets.all(15),
                                           child: Stack(
                                             children: [
                                               Positioned(
@@ -111,28 +112,33 @@ class _FeedbacksState extends State<Feedbacks> {
                                                   ),
                                                 ),
                                               ),
-                                              Center(
-                                                child: Container(
-                                                    clipBehavior: Clip.hardEdge,
-                                                    height: deviceHeight * .60,
-                                                    decoration: const BoxDecoration(
-                                                      color: Colors.white,
-                                                    ),
-                                                    child:  PhotoView(
-                                                      backgroundDecoration:
-                                                      const BoxDecoration(
-                                                        color: Colors.grey,
-                                                      ),
-                                                      minScale: PhotoViewComputedScale
-                                                          .contained *
-                                                          1,
-                                                      imageProvider: FileImage(
-                                                        File(
-                                                            '${dir.path}/$fullPath'),
-                                                      ),
-                                                    )
+                                              Padding(
+                                                padding:
+                                                    const EdgeInsets.fromLTRB(
+                                                        20, 50, 20, 20),
+                                                child: FutureBuilder(
+                                                  future: File(
+                                                          '${dir.path}/$fullPath')
+                                                      .readAsString(),
+                                                  builder: (context, snapshot) {
+                                                    if (snapshot
+                                                            .connectionState ==
+                                                        ConnectionState.done) {
+                                                      return SingleChildScrollView(
+                                                          scrollDirection:
+                                                              Axis.vertical,
+                                                          child: Column(
+                                                            children: [
+                                                              Text(
+                                                                  "${snapshot.data}")
+                                                            ],
+                                                          ));
+                                                    } else {
+                                                      return Center();
+                                                    }
+                                                  },
                                                 ),
-                                              )
+                                              ),
                                             ],
                                           ),
                                         );
